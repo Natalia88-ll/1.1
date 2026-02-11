@@ -1,0 +1,15 @@
+def is_prime(n):
+    """Возвращает True, если n — простое число, иначе False."""
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+# Пример использования
+number = 29
+if is_prime(number):
+    print(f"{number} — простое число")
+else:
+    print(f"{number} — не простое число")
