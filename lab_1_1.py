@@ -4,7 +4,7 @@ TR = 2.0
 A, B = 0.0, math.pi
 
 def rectangle_method(n):
-    """Метод средних прямоугольников"""
+    
     h = (B - A) / n
     total = 0.0
     for i in range(n):
@@ -13,7 +13,7 @@ def rectangle_method(n):
     return h * total
 
 def find_n_for_accuracy(target_accuracy):
-    """Найти минимальное n для заданной точности"""
+    
     max_error = (1 - target_accuracy) * TR
     n = 1
     while True:
@@ -23,7 +23,7 @@ def find_n_for_accuracy(target_accuracy):
             return n, approx, error
         n *= 2  
 
-# Запуск для разных точностей
+
 for acc in [0.9, 0.99, 0.999, 0.99999]:
     n, result, error = find_n_for_accuracy(acc)
     print(f"Точность {acc}: n={n}, результат={result:.6f}, ошибка={error:.6f}")
